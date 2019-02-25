@@ -42,7 +42,7 @@ def fetch_1_at_a_time(urls_filenames)
     easy.url = url_fn["url"]
     filename = url_fn["filename"]
     $stderr.print "filename:'#{filename}'"
-    $stderr.print "url:'#{url}' :"
+    $stderr.print "url:'#{url_fn["url"]}'"
     if File.exist?(filename)
       $stderr.printf("skipping EXISTING filename:%s\n", filename)
       next
@@ -84,7 +84,7 @@ photosColl.find(
       id = p["id"]
       title = p["title"]
       url = p["url_o"]
-      filename = sprintf("%d-%s", id, title)
+      filename = sprintf("%d-%s.jpg", id, title)
 
       $stderr.printf("photo:%d, title:%s url:%s filename:%s\n", id, title, url, filename)
       urls_filenames.push({"url"=> url, "filename" => filename}) if !url.nil?
