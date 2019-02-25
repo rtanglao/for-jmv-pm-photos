@@ -1,6 +1,15 @@
 # for-jmv-pm-photos
 for the fab jmv - photos from pm
 
+## 25February download the photos
+
+```bash
+mkdir /home/roland/GIT/for-jmv-pm-photos/ADVERTS_ORIGINALS
+cd !$
+../backup-originals.rb
+```
+
+
 ## 24February2019 getting the metadata
 
 * To use [get-set-photo-metadata.rb](https://github.com/rtanglao/for-jmv-pm-photos/blob/master/get-set-photo-metadata.rb), first setup mongoddb
