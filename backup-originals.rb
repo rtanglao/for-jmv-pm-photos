@@ -82,7 +82,7 @@ photosColl.find(
       "title" => 1,
 }).each do |p|
       id = p["id"]
-      title = p["title"]
+      title = p["title"].gsub("/", " ")
       url = p["url_o"]
       filename = sprintf("%d-%s.jpg", id, title)
 
