@@ -90,7 +90,7 @@ photosColl.find(
       urls_filenames.push({"url"=> url, "filename" => filename}) if !url.nil?
 end
 
-$stderr.printf("FETCHING:%d originals\n", urls.length)
+$stderr.printf("FETCHING:%d originals\n", urls_filenames.length)
 
 fetch_1_at_a_time(urls_filenames)
 
